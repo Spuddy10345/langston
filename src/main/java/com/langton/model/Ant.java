@@ -18,6 +18,9 @@ public class Ant {
     public int getId() { return id; }
     public Direction getDirection() { return direction; }
 
+    /**
+     * Executes movement rules. NOTE: Caller must acquire grid region locks.
+     */
     public void step(Grid grid) {
         // This method will be called by the simulation engine
         // which must handle the locking based on the grid's regions.

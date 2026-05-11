@@ -83,6 +83,7 @@ public class ParallelEngine implements SimulationEngine {
                 lock.unlock();
             }
         } else {
+            // Boundary crossing: Acquire locks in consistent order (lowest ID first) to prevent deadlocks.
             int first = Math.min(r1, r2);
             int second = Math.max(r1, r2);
             

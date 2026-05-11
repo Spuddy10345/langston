@@ -10,10 +10,10 @@ import java.util.List;
 
 public class Benchmark {
     public static void main(String[] args) {
-        int width = 1000;
-        int height = 1000;
-        int steps = 10000;
-        int[] antCounts = {100, 1000, 5000};
+        int width = 2000;
+        int height = 2000;
+        int steps = 20000;
+        int[] antCounts = {1000, 10000, 30000};
         int numThreads = Runtime.getRuntime().availableProcessors();
 
         System.out.println("Benchmarking Langton's Ant Simulation");
